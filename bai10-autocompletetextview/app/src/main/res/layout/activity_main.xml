@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edtTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Mời nhập tên của bạn"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn tỉnh thành"
+        android:textColor="#3F51B5"
+        android:layout_marginTop="5dp"
+        android:textSize="24sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoTinhThanh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:completionThreshold="0"
+        android:hint="-- Chọn tỉnh thành"
+        />
+</LinearLayout>
