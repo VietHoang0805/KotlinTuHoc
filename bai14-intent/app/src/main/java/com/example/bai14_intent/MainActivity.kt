@@ -2,6 +2,7 @@ package com.example.bai14_intent
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.ComponentActivity
@@ -27,7 +28,30 @@ class MainActivity : ComponentActivity() {
         // Gọi màn hình 2
         binding.btnGo.setOnClickListener {
             val i = Intent(this,manhinh2::class.java)
+
+            // Truyền dữ liệu bằng bundle
+            // 1. nạp dữ liệu
+            val bundle = Bundle()
+            bundle.putString("bienString","Chào mừng đến với tuhoc.cc")
+            bundle.putDouble("bienDouble", 123456.789)
+            bundle.putBoolean("bienBool", true)
+            bundle.putInt("bienInt",78)
+            // Đặt bundle trong intent
+            i.putExtras(bundle)
+
+            // Truyền dữ liệu trực tiếp bằng intent
+            /* i.putExtra("bienString","Chào mừng đến với tuhoc.cc")
+            i.putExtra("bienDouble", 123456.789)
+            i.putExtra("bienBool", true) */
+
             startActivity(i)
+
+
+        }
+        // Gọi url tới màn hình
+        binding.btnGo2.setOnClickListener {
+            val i2 = Intent(Intent.ACTION_VIEW, Uri.parse("https://tuhoc.cc"))
+            startActivity(i2)
         }
     }
 }
