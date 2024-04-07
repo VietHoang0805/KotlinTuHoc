@@ -2,9 +2,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bai16_1_recyclerview.OutData
+import com.example.bai16_1_recyclerview.RvInterface
 import com.example.bai16_1_recyclerview.databinding.LayoutItemBinding
 
-class RvAdapter(private val ds: List<OutData>) : RecyclerView.Adapter<RvAdapter.PhimViewHolder>() {
+class RvAdapter(private val ds: List<OutData>, val onPhimClick:RvInterface) : RecyclerView.Adapter<RvAdapter.PhimViewHolder>() {
 
     inner class PhimViewHolder(val binding: LayoutItemBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -19,6 +20,11 @@ class RvAdapter(private val ds: List<OutData>) : RecyclerView.Adapter<RvAdapter.
             txtMieuTa.text = item.mieuta
             txtTenPhim.text = item.tenPhim
             imgPhim.setImageResource(item.image)
+
+            // Lắng nghe item được click chọn
+            holder.itemView.setOnClickListener {
+                onPhimClick.OnClickPhim(position)
+            }
         }
     }
 
