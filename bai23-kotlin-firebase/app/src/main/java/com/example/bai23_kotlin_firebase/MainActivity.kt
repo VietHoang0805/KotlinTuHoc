@@ -1,6 +1,7 @@
 package com.example.bai23_kotlin_firebase
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,5 +22,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnInsertData.setOnClickListener {
+            val intent = Intent(this,InsertionActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

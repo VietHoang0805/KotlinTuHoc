@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "223153691613",
+    "firebase_url": "https://tuhoc-firebase-f2913-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "tuhoc-firebase-f2913",
+    "storage_bucket": "tuhoc-firebase-f2913.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223153691613:android:f24a07966f4df829a47434",
+        "android_client_info": {
+          "package_name": "com.example.bai23_kotlin_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzeY46J_5TDuhyxCJ6IKKIGAwFCs4iI60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
