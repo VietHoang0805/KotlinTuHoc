@@ -123,19 +123,19 @@
             android:layout_height="wrap_content"
             android:text="ViewAll" />
 
-        <SearchView
-            android:layout_width="match_parent"
-            android:id="@+id/searchView"
-            android:visibility="gone"
-            android:layout_height="64dp" >
 
-        </SearchView>
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="64dp" />
 
         <ListView
+            android:id="@+id/lvFull"
             android:layout_width="match_parent"
             android:visibility="gone"
-            android:id="@+id/lvFull"
             android:layout_height="match_parent" />
+
     </LinearLayout>
 
 </LinearLayout>
